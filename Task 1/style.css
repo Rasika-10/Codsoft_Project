@@ -1,0 +1,669 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* HTML styles */
+html {
+    scroll-behavior: smooth;
+    cursor: url(https://github.com/PulkitSinghDev/PulkitSinghDev.github.io/blob/main/hi-from-pulkit-removebg-preview.cur), auto;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Common section styles */
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* Font styles */
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title styles */
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+  
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: crimson;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo .hire {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo .hire span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo .hire span {
+    color: #fff;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li .hire {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li .hire:hover {
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+/* Menu button styles */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Scroll up button styles */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+
+/* Home section styles */
+.home {
+    display: flex;
+    background: url("https://yalantis.com/uploads/ckeditor/pictures/2916/dribble_perfect.gif") no-repeat center;
+    background-color: black;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 30px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home-content .hire {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .home-content .hire:hover {
+    color: crimson;
+    background: none;
+}
+
+/* About section styles */
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 320px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: crimson;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: crimson;
+    background: none;
+}
+.about-content {
+    display: flex;
+}
+
+.column.left {
+    flex: 1;
+}
+
+.column.right {
+    flex: 2;
+    padding-left: 20px; /* Optional: Add padding for spacing */
+}
+
+
+
+/* Skills section styles */
+/* Skills section styles */
+/* Skills section styles */
+/* Skills section styles */
+.skills {
+    background: #e4e2e2;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.skills .title {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills .skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.skills .skills-content .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px;
+}
+
+.skills .skills-content .column .text {
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.skills .skills-content .progress-bar {
+    flex: 2;
+    background: #f1f1f1;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 10px;
+    position: relative;
+    width: 60%;
+}
+
+.skills .skills-content .progress-bar .progress {
+    height: 100%;
+    background: crimson;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.skills .skills-content .column:hover .progress-bar .progress {
+    width: 100%;
+}
+
+.skills .skills-content .percentage {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+    flex: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .skills .skills-content .column {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .skills .skills-content .column .text,
+    .skills .skills-content .percentage {
+        text-align: center;
+    }
+
+    .skills .skills-content .progress-bar {
+        width: 80%;
+    }
+}
+
+/* Resume section styles */
+/* Resume section styles */
+.resume {
+    background: #f9f9f9;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.resume .title {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.resume .resume-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.resume .resume-btn {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume .resume-btn:hover {
+    background: #e60000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resume .resume-btn i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .resume .resume-btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+
+/* Projects section styles */
+/* Projects section styles */
+
+    /* Projects section styles */
+.projects {
+    background: #e4e2e2;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.projects .title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: calc(50% - 30px); /* Adjust the width as needed */
+    margin-bottom: 30px;
+}
+
+.project img {
+    width: 100%; /* Adjust the image size to fill the container */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-info {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project {
+        width: calc(100% - 30px);
+    }
+}
+
+
+/* Contact section styles */
+/* Contact section styles */
+.contact {
+    background: #f9f9f9;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact .title {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact .contact-info {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.contact .contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact .contact-info .info-item i {
+    font-size: 24px;
+    color: #333;
+    margin-right: 15px;
+}
+
+.contact .contact-info .info-item span {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.contact .contact-info .info-item a,
+.contact .contact-info .info-item p {
+    color: #555;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact .contact-info {
+        width: 100%;
+    }
+}
+
+
+/* Footer section styles */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .max-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+footer .social-links {
+    margin: 20px 0;
+}
+
+footer .social-links a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+    background: crimson;
+}
+
+footer p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .skills .skills-content .column,
+    .resume .timeline .container,
+    .projects .project-card,
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    .resume .timeline .container {
+        width: calc(100% - 40px);
+        margin-bottom: 20px;
+    }
+
+    .resume .timeline .container.left,
+    .resume .timeline .container.right {
+        left: 0;
+    }
+
+    .resume .timeline::before {
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills .skills-content .column,
+    .resume .timeline .container,
+    .projects .project-card,
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    .resume .timeline .container {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+
+    .resume .timeline::before {
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    .contact .right form .fields .field {
+        width: 100%;
+    }
+}
